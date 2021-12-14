@@ -1,35 +1,36 @@
-import React from "react";
-import "./App.css";
+import './App.css';
+import Header from './components/Header';
 
-import Navbar from "./components/Navbar";
-import Carouselhome from "./components/Carouselhome";
-import Membershipmenu from "./components/Membershipmenu";
-import Category from "./components/Category";
-import Restaurantcarousel from "./components/Restaurantcarousel";
-import RestaurantMenu from "./components/RestaurantMenu";
-import Allrestaurants from "./components/Allrestaurants";
+import { useState } from 'react';
+import FeatureSection from './components/FeatureSection';
+import PocketSection from './components/PocketSection';
+import CitySection from './components/CitySection.js';
+import ActionSection from './components/ActionSection';
+import Footer from './components/Footer';
+import Slider from './components/Slider';
+import SignIn from './components/SignIn';
+import Login from './components/Login';
+// import LogIn from './components/LogIn';
 
-import { Switch, Route, Redirect } from "react-router-dom";
+function App (){
 
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Switch>
-        <Redirect exact from="/" to="/restaurants" />
-        <Route path="/restaurants" exact>
-          <Carouselhome />
-          <Membershipmenu />
-          <Category />
-          <Allrestaurants />
-        </Route>
-        <Route path="/restaurants/:rname">
-          <Restaurantcarousel />
-          <RestaurantMenu />
-        </Route>
-      </Switch>
-    </>
-  );
+   
+
+ 
+        return (
+            <div className="App">
+            <div className="header123"><Header/></div>
+           
+<div className="brightlow">
+            <div className="feature123"><FeatureSection/></div>
+            <div className="pocket123"> <PocketSection/></div>
+            <div className="action123"> <ActionSection/></div>
+            
+            <div className="city123"><CitySection/></div>
+            <div className="footer123"><Footer/></div>
+            </div></div>
+        
+    );
 }
 
 export default App;
